@@ -1,0 +1,13 @@
+declare module '*.png';
+
+declare module '*.json' {
+    const value: any;
+    export default value;
+}
+
+declare module '*.svg' {
+    import React from "react";
+    import { Svg } from 'react-native-svg';
+    const content: React.FC<SvgProps>;
+    export default content;
+}
